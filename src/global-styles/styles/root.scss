@@ -1,0 +1,22 @@
+/// Root Styles file
+/// Here we define all the root variables we need for our project.
+/// For examples see Material Design color system: https://m2.material.io/design/color/the-color-system.html
+/// 
+/// 
+/// /// medium/ semibold / bold: 500 600 700
+
+:root {
+    --color-backgrond: #0C1829;
+    --color-box: #13243C;
+    --color-title: #fff;
+    --color-body : #9293B9;
+    --color-primary: #04FCFA;
+    --color-stroke: #2B3953;
+
+    --text-font-family: 'Manrope', sans-serif;
+    --heading-font-size: 24px;
+    --text-bold : 700;
+    --text-semi : 600;
+    --text-regular: 500;
+} 
+

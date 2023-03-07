@@ -1,0 +1,50 @@
+/// Main Fonts File
+/// Here we import all the fonts files we need for our project.
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+
+
+@mixin h1Style {
+    color:var(--color-title);
+    font: var(--text-bold) var(--heading-font-size)/var(--heading-font-size) var(--text-font-family);
+    margin-bottom: var(--heading-font-size);
+    letter-spacing: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+@mixin fontStyle($weight, $size) {
+    font: $weight #{$size}px/1.6 var(--text-font-family);
+}  
+
+@mixin body1($weight: var(--text-regular), $size:18) {
+    @include fontStyle($weight, $size);
+    letter-spacing: -0.01em;
+
+    &.bold,
+    & span.bold {
+        font-weight: var(--text-bold);
+    }
+    &.semibold,
+    span.semibold {
+        font-weight: var(--text-semi);
+    }
+    &.white,
+     span.white {
+        color: var(--color-title);
+    }
+    &.accent {
+        color:var(--color-primary); 
+    }
+}  
+@mixin body2($size: 16) {
+    @include body1(var(--text-regular), $size);
+    @media #{$tablet-breakpoint} {
+        font-size: 14px;
+    }
+}
+

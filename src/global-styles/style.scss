@@ -1,0 +1,24 @@
+/// Main Styles File
+/// Here we import all the global Styles files we need for our project.
+
+@import "styles/normalize.scss";
+@import "styles/fonts.scss";
+@import "styles/layout.scss";
+@import "styles/root.scss";
+
+h1 {
+  @include h1Style;
+}
+
+p {
+  @include body1;
+}
+p.body2 {
+  @include body2;
+}
+
+.rate p {
+  @media #{$tablet-breakpoint} {
+    font-size: 16px;
+  }
+}
